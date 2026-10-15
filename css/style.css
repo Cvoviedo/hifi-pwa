@@ -1,0 +1,133 @@
+/* Mobile-first base styles */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #F5F5F0;
+  color: #293B2C;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Screen show/hide system */
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* Header */
+header {
+  background: #E8EFE3;
+  color: #304B34;
+  padding: 16px;
+  border-bottom: 3px solid #D5E2CE;
+}
+header h1 { font-size: 22px; }
+
+/* Plant list items */
+#plant-list { list-style: none; padding: 16px; }
+#plant-list li {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 6px rgba(73, 104, 73, 0.10);
+  border-left: 4px solid #78966D;
+}
+
+/* Input styling */
+input, select {
+  width: auto;
+  padding: 12px 14px;
+  border: 2px solid #D5E2CE;
+  border-radius: 8px;
+  background: #FFFCF5;
+  color: #293B2C;
+  font-size: 16px;
+  margin: 8px 0 16px;
+}
+input:focus, select:focus {
+  outline: none;
+  border-color: #496849;
+}
+
+/* Buttons */
+button {
+  min-height: 44px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#btn-save, #btn-home {
+  width: 100%;
+  background: #496849;
+  color: white;
+  font-weight: 700;
+}
+
+#btn-add {
+  position: fixed;
+  bottom: 24px;
+  right: max(24px, calc((100vw - 430px) / 2 + 24px));
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #496849;
+  color: white;
+  font-size: 28px;
+  box-shadow: 0 3px 8px rgba(48, 75, 52, 0.25);
+}
+
+/* Plant theme accents */
+#screen-home {
+  background: #FFFCF5;
+  min-height: 100vh;
+}
+
+#screen-action {
+  background: #FFFCF5;
+  min-height: 100vh;
+}
+
+#screen-action label {
+  display: block;
+  margin: 16px 16px 0;
+  color: #304B34;
+  font-weight: 600;
+}
+
+#screen-action input,
+#screen-action select {
+  width: calc(100% - 32px);
+  margin: 8px 16px 16px;
+}
+
+/* Confirmation card */
+.confirm-card {
+  text-align: center;
+  padding: 48px 24px;
+  background: #F4DEDF;
+  border-radius: 18px;
+  margin: 30px 16px;
+  box-shadow: 0 3px 10px rgba(73, 104, 73, 0.08);
+}
+.confirm-card p {
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: #304B34;
+}
+
+/* Responsive: tablet and up */
+@media (min-width: 600px) {
+  body {
+    border: 1px solid #D5E2CE;
+    border-radius: 12px;
+    margin-top: 40px;
+    overflow: hidden;
+  }
+}

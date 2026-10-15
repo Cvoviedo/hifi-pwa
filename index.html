@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Life</title>
+  <meta name="theme-color" content="#496849">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <script defer src="/script.js"></script>
+  </head>
+<body>
+  <div id="app">
+
+    <!-- HOME SCREEN -->
+    <section id="screen-home" class="screen active">
+      <header>
+        <h1>Plant Life 🌿</h1>
+      </header>
+
+      <ul id="plant-list"></ul>
+
+      <button id="btn-add" aria-label="Add new plant">+</button>
+    </section>
+
+    <!-- ACTION SCREEN -->
+    <section id="screen-action" class="screen">
+      <header>
+        <button id="btn-cancel">← Back</button>
+        <h1 id="form-title">Add New Plant</h1>
+      </header>
+
+      <form id="plant-form">
+        <label for="plant-name">Plant Name</label>
+        <input id="plant-name" type="text"
+               placeholder="e.g. Fiddle-Leaf Fig" required>
+
+        <label for="watering">Watering Schedule</label>
+        <input id="watering" type="number" min="1" max="90"
+               placeholder="Every how many days?" required>
+
+        <label for="light">Light Requirements</label>
+        <select id="light">
+          <option>Indirect Sunlight</option>
+          <option>Direct Sunlight</option>
+          <option>Low Light</option>
+          <option>Medium Light</option>
+        </select>
+
+        <button id="btn-save" type="submit">Save Plant</button>
+      </form>
+    </section>
+
+    <!-- CONFIRMATION SCREEN -->
+    <section id="screen-confirm" class="screen">
+      <div class="confirm-card">
+        <p aria-live="polite">🌱 Plant Saved!</p>
+        <button id="btn-home">Back to Home</button>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
